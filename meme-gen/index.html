@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sam-pedia: Meme Generator</title>
+    <link rel="stylesheet" href="meme-page.css">
+</head>
+<body>
+    <div>
+        Re-live your very best
+        <b> 
+            <span class="colors">m</span>
+            <span class="colors">i</span>
+            <span class="colors">d</span>
+            <span class="colors">-</span>
+            <span class="colors">2</span>
+            <span class="colors">0</span>
+            <span class="colors">0</span>
+            <span class="colors">0</span>
+            <span class="colors">s</span>
+        </b>
+         memories through this authentic meme generator! To start, follow the below instructions.
+    </div>
+    <ol>
+        <li>Provide a url for the image you would like to use.</li>
+        <li>Provide a top caption.</li>
+        <li>Provide a bottom caption.</li>
+    </ol>
+    <div>
+        Its that easy!
+    </div>
+
+    <hr>
+
+    <div class="forms">
+        <form action="" method="" id="meme-form">
+            <label for="">1) Image URL
+                <input type="text" name="meme-url" size="75">
+            </label><br>
+
+            <label for="top-meme-text">2) Top text
+                <input type="text" name="top-meme-text" size="75">
+            </label><br>
+
+
+            <label for="bottom-meme-text">3) Bottom text
+                <input type="text" name="bottom-meme-text" size="75"><br>
+            </label><br>
+        </form>
+
+        <button type="submit" form="meme-form" value="Submit">Submit</button>
+
+    </div>
+
+    <hr>
+
+    <div class="generated-images" id="images">
+
+    </div>
+    
+    <script src="meme-generator-behavior.js"></script>
+
+</body>
+</html>
+
+
+
+
+<!-- 
+Requirements
+
+1. User should be able to submit a form on the page to generate a new meme on the page, and should be able to add multiple memes to the page by submitting the form multiple times.
+2. Users should be able to click on a button to remove a meme from the page.
+3. When the meme form is submitted, values in the form inputs should be cleared. -->
