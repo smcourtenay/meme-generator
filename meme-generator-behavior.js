@@ -19,18 +19,15 @@ memeForm.addEventListener("submit", (e) => { // get data from the submission
     const container = document.createElement('div'); // creating a container to hold our div texts and our image
     // CONSIDER adding an event listener on click to this for deletion purposes in the future
 
-    container.addEventListener("click", function(e){
-        container.remove(); // this deletes the object. Now just add a transparent red or an X on hover to finish
-    })
-
-    container.addEventListener("mouseover", function(e){
-        console.log("hovering");
-        container.style.color = "red";
-    })
-
     const div1 = document.createElement('div');
     const div2 = document.createElement('div');
     const newImg = document.createElement("img"); // creates a new img element. We'll need to add src and loop for new one?
+    const deleteButton = document.createElement("button");
+
+    deleteButton.addEventListener("click", function(e){
+        container.remove(); // this deletes the object. Now just add a transparent red or an X on hover to finish
+    })
+
 
     // Update the below URL with a variable holding the value supplied by the form
     newImg.setAttribute("src",imgSrc);
@@ -41,6 +38,7 @@ memeForm.addEventListener("submit", (e) => { // get data from the submission
     container.setAttribute("class","container")
     div1.setAttribute("id","div1")
     div2.setAttribute("id","div2")
+    deleteButton.setAttribute("class","delete-button");
 
     imgs.prepend(container); // add a new container to the flexbox'd imgs section
 
@@ -48,6 +46,9 @@ memeForm.addEventListener("submit", (e) => { // get data from the submission
     container.prepend(div1);
     container.append(newImg);
     container.append(div2);
+    container.append(deleteButton);
+
+    document.querySelector(".delete-button").innerText="Delete";
 
     // get the HTMLElement object with the ids and update the innerText with the value provided by the button
     const topText = document.getElementById("div1");
